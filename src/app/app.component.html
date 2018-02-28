@@ -1,2 +1,8 @@
-
-<input (ngModelChange)="onAmountChange($event)">
+<!-- The async pipe is a little helper angular provides. It allows us,
+to resolve observables directly from our template's HTML code. It takes
+care of all the technical difficulties, including unsubscribing from the
+observable.  -->
+<input [ngModel]='amount$ | async' (ngModelChange)="onAmountChange($event)">
+<p *ngFor="let currency of (currencyRates$ | async)">
+  {{currency.code + ' ' + currency.value * (amount$ | async)}}
+</p>

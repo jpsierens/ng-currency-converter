@@ -11,3 +11,9 @@ export interface State {
     amount: number;
     currencies: Currency[];
 }
+
+
+// Selectors (queries to the state)
+export const getAmountState = (state: State) => state.amount;
+
+export const getCurrencyRates = (state: State) => state.currencies;

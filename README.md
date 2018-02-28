@@ -1,5 +1,8 @@
 # Currency Conversion
 
+This app provides a quick reference to check how an angular app is composed
+using ngrx (both version 4).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
 ## Development server
